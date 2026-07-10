@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ONAtrail – Advanced trail running analytics and race preparation</title>
-  <meta name="description" content="ONAtrail is a web platform dedicated to trail runners, helping athletes prepare for races, analyze their performances, and gain personalized insights from their training activities through Strava integration."/>
+  <title>ONAtrail – Support &amp; Strava Integration Help</title>
+  <meta name="description" content="Support page for ONAtrail athletes: how to connect your Strava account, frequently asked questions, contact and privacy information."/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -18,6 +18,8 @@
       --line: #e0e0e0;
       --bg-soft: #fafafa;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -36,18 +38,18 @@
     /* ---------- Hero ---------- */
     .hero {
       border-bottom: 1px solid var(--line);
-      padding: 72px 0 56px;
+      padding: 64px 0 48px;
       text-align: center;
     }
 
     .hero img.logo {
-      width: 88px;
-      height: 88px;
-      margin-bottom: 18px;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       font-weight: 700;
       color: var(--ink);
       line-height: 1.15;
@@ -57,32 +59,57 @@
     .hero h1 .accent { color: var(--green-dark); }
 
     .hero .tagline {
-      margin-top: 10px;
-      font-size: 18px;
+      margin-top: 8px;
+      font-size: 17px;
       font-weight: 500;
       color: var(--ink);
     }
 
     .hero .intro {
-      margin: 18px auto 0;
+      margin: 16px auto 0;
       max-width: 640px;
-      font-size: 15.5px;
+      font-size: 15px;
       color: var(--text);
+    }
+
+    .hero nav {
+      margin-top: 24px;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero nav a {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .hero nav a:hover {
+      border-color: var(--green-dark);
+      background: var(--bg-soft);
     }
 
     /* ---------- Sections ---------- */
     main section {
-      padding: 52px 0;
+      padding: 48px 0;
       border-bottom: 1px solid var(--line);
+      scroll-margin-top: 16px;
     }
 
     main section:last-of-type { border-bottom: none; }
 
     section h2 {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--ink);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     section p { margin-bottom: 10px; font-size: 15px; }
@@ -97,36 +124,83 @@
     .feature {
       border: 1px solid var(--line);
       border-radius: 6px;
-      padding: 18px 20px;
+      padding: 16px 18px;
     }
 
     .feature h3 {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 600;
       color: var(--ink);
       margin-bottom: 4px;
     }
 
-    .feature p { font-size: 14px; color: var(--text); margin: 0; }
+    .feature p { font-size: 13.5px; color: var(--text); margin: 0; }
 
-    /* ---------- Preview ---------- */
-    .preview-card {
+    /* ---------- Steps ---------- */
+    ol.steps {
+      list-style: none;
+      counter-reset: step;
+      margin-top: 4px;
+    }
+
+    ol.steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 12px 0 12px 48px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+    }
+
+    ol.steps li:last-child { border-bottom: none; }
+
+    ol.steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #04331f;
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-item {
       border: 1px solid var(--line);
       border-radius: 6px;
-      padding: 24px;
+      padding: 16px 20px;
+      margin-bottom: 10px;
+    }
+
+    .faq-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .faq-item p { font-size: 14.5px; margin-bottom: 6px; }
+    .faq-item p:last-child { margin-bottom: 0; }
+    .faq-item ul { margin: 4px 0 6px 18px; font-size: 14.5px; }
+    .faq-item ul li { margin-bottom: 4px; }
+
+    /* ---------- Contact ---------- */
+    .contact-card {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 22px 24px;
       text-align: center;
       background: var(--bg-soft);
     }
 
-    .preview-card p { font-size: 14.5px; margin-bottom: 14px; }
-    .preview-card p:first-child { margin-bottom: 4px; }
-
-    .preview-card .disclaimer {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 12px;
-      margin-bottom: 0;
-    }
+    .contact-card p { font-size: 15px; margin-bottom: 12px; }
 
     .btn {
       display: inline-block;
@@ -147,6 +221,11 @@
       text-decoration: underline;
     }
 
+    .disclaimer {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
     /* ---------- Footer ---------- */
     footer {
       border-top: 1px solid var(--line);
@@ -160,8 +239,8 @@
 
     @media (max-width: 640px) {
       .wrap { padding: 0 20px; }
-      .hero { padding: 48px 0 40px; }
-      .hero h1 { font-size: 2rem; }
+      .hero { padding: 44px 0 36px; }
+      .hero h1 { font-size: 1.9rem; }
       .feature-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -173,58 +252,105 @@
   <header class="hero">
     <img class="logo" src="logo.png" alt="ONAtrail logo"/>
     <h1>ONA<span class="accent">trail</span></h1>
-    <p class="tagline">Advanced trail running analytics and race preparation platform</p>
-    <p class="intro">ONAtrail is a specialized trail running performance web platform designed to support athletes before, during, and after their races. Trail running presents unique challenges compared to road running — elevation changes, technical terrain, and race-specific pacing demands — and ONAtrail provides dedicated tools to address them.</p>
+    <p class="tagline">Support &amp; Strava Integration Help</p>
+    <p class="intro">ONAtrail is a trail running analytics and race preparation web platform. This page is the support site for ONAtrail athletes: how to connect your Strava account, answers to common questions, and how to reach us.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#connect-strava">Connect Strava</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
   </header>
 
   <main>
 
-    <section id="features">
-      <h2>Main Features</h2>
-      <div class="feature-grid">
+    <section id="about">
+      <h2>About ONAtrail</h2>
+      <p>ONAtrail is a specialized trail running performance web platform designed to support athletes before, during, and after their races. Through Strava integration, athletes access trail-specific tools:</p>
+      <div class="feature-grid" style="margin-top:14px;">
         <div class="feature">
           <h3>Trail race preparation</h3>
-          <p>Pacing assistance based on course characteristics and historical race performance data, helping athletes build a race strategy adapted to their goals and the specific demands of each course.</p>
+          <p>Pacing assistance based on course characteristics and historical race performance data.</p>
         </div>
         <div class="feature">
           <h3>Performance analytics</h3>
-          <p>Elevation-based performance metrics and detailed post-race analysis to help athletes better understand their performance.</p>
+          <p>Elevation-based performance metrics and detailed post-race analysis.</p>
         </div>
         <div class="feature">
           <h3>Athlete profile</h3>
-          <p>Personalized performance profiles, including climbing and descending ability analysis, to identify individual strengths and weaknesses.</p>
+          <p>Climbing and descending ability analysis to identify individual strengths and weaknesses.</p>
         </div>
         <div class="feature">
           <h3>Strava integration</h3>
-          <p>Athletes securely connect their personal activity history through the Strava API. All Strava data is used solely to provide insights and personalized analytics to the authenticated athlete within their own account.</p>
+          <p>All Strava data is used solely to provide insights to the authenticated athlete within their own account.</p>
         </div>
       </div>
-      <p style="margin-top:18px; margin-bottom:0;">Our objective is to complement the Strava ecosystem by delivering specialized trail running analytics and race preparation tools that help endurance athletes better understand their capabilities, optimize their strategies, and improve their overall trail running experience.</p>
+      <p style="margin-top:16px; margin-bottom:0;">The platform is currently in its final development phase, with a public launch planned for August 14, 2026. You can preview the interface in our <a class="text-link" href="https://www.figma.com/proto/dor8wuEFfW1tCCf6CDefar/MagicTrail--UI-?node-id=1087-5191&p=f&t=1Uyx5oHusw4AzUDn-1&scaling=scale-down&content-scaling=fixed&page-id=1087%3A2986&starting-point-node-id=1087%3A5191&show-proto-sidebar=1" target="_blank" rel="noopener">interactive Figma prototype</a> <span class="disclaimer">(work in progress — not the final design)</span>.</p>
     </section>
 
-    <section id="preview">
-      <h2>Application Preview</h2>
-      <div class="preview-card">
-        <p>Explore the interface prototype: dashboard, activity analysis, athlete profile and pacing tools.</p>
-        <a class="btn" href="https://www.figma.com/proto/dor8wuEFfW1tCCf6CDefar/MagicTrail--UI-?node-id=1087-5191&p=f&t=1Uyx5oHusw4AzUDn-1&scaling=scale-down&content-scaling=fixed&page-id=1087%3A2986&starting-point-node-id=1087%3A5191&show-proto-sidebar=1" target="_blank" rel="noopener">View the interactive prototype on Figma</a>
-        <p class="disclaimer">Please note: this prototype is still a work in progress and does not reflect the final design of the application.</p>
+    <section id="connect-strava">
+      <h2>Connecting your Strava account</h2>
+      <ol class="steps">
+        <li>Log in to your ONAtrail account.</li>
+        <li>Click <strong>Connect with Strava</strong> in your account settings.</li>
+        <li>You will be redirected to Strava's official authorization page. Review the requested permissions and click <strong>Authorize</strong>.</li>
+        <li>You're done — your activities will be synchronized automatically and your trail analytics will start appearing in your dashboard.</li>
+      </ol>
+      <p class="disclaimer" style="margin-top:12px; margin-bottom:0;">ONAtrail never sees or stores your Strava password. Authorization is handled entirely by Strava through its official OAuth flow.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Why do I need to connect my Strava account?</h3>
+        <p>Connecting your Strava account lets ONAtrail analyze your training history to provide personalized trail analytics: pacing recommendations, climbing and descending profiles, and race preparation tools tailored to you.</p>
       </div>
+
+      <div class="faq-item">
+        <h3>What data is imported from Strava?</h3>
+        <p>Only the activity data needed to provide your insights: activities with distance, duration, elevation gain, GPS tracks, pace and heart rate when available. Your data is only ever visible to you, within your own account. We never sell your data and we never share it with third parties for advertising.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I disconnect my Strava account?</h3>
+        <p>You can revoke ONAtrail's access at any time, in either of two ways:</p>
+        <ul>
+          <li>From ONAtrail: open your account settings and click <strong>Disconnect Strava</strong>.</li>
+          <li>From Strava: go to <strong>Settings → My Apps</strong> on strava.com and click <strong>Revoke Access</strong> next to ONAtrail.</li>
+        </ul>
+        <p>Once access is revoked, synchronization stops immediately.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I delete my data?</h3>
+        <p>You can request deletion of your account and all associated data at any time from your account settings or by emailing us at <a class="text-link" href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a>. See our <a class="text-link" href="privacy.html#data-retention">Privacy Policy</a> for details on data retention.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>My activities are not syncing. What should I do?</h3>
+        <p>First, check that ONAtrail still appears in <strong>Settings → My Apps</strong> on strava.com. If it does and syncing still fails, contact us at <a class="text-link" href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a> and we will help you resolve the issue.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Need help?</h2>
+      <div class="contact-card">
+        <p>For any question about ONAtrail or your Strava connection, our team is happy to help.</p>
+        <a class="btn" href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>Privacy Policy</h2>
+      <p style="margin-bottom:0;">Learn how we collect, use and protect your data: <a class="text-link" href="privacy.html">read our Privacy Policy</a>.</p>
     </section>
 
     <section id="status">
       <h2>Development Status</h2>
       <p>ONAtrail is currently in its final development phase and is scheduled for public launch on August 14, 2026.</p>
-      <p style="font-size:13.5px; color:#888888; margin-bottom:0;">This page is a temporary landing page published for the duration of the development phase. The final ONAtrail website will be hosted on its own domain, not at this URL.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>For any questions about ONAtrail, reach us at <a class="text-link" href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a>.</p>
-    </section>
-
-    <section id="privacy">
-      <h2>Privacy Policy</h2>
-      <p>Learn how we collect, use and protect your data: <a class="text-link" href="privacy.html">read our Privacy Policy</a>.</p>
+      <p class="disclaimer" style="margin-bottom:0;">This page is a temporary support and information page published for the duration of the development phase. The final ONAtrail website will be hosted on its own domain, not at this URL.</p>
     </section>
 
   </main>
