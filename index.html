@@ -3,299 +3,395 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ONAtrail – Privacy Policy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <title>ONAtrail – Trail Running Platform · MAGIC-Trail Research Project</title>
+  <meta name="description" content="ONAtrail is a trail running platform developed by the MAGIC-Trail research project (CHU de La Réunion). Race preparation, pacing, performance analysis and scientific research, with Strava and Garmin synchronization."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #10e397;
+      --green-dark: #0a9c68;
+      --ink: #111111;
+      --text: #333333;
+      --muted: #888888;
+      --line: #e0e0e0;
+      --bg-soft: #fafafa;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
       background-color: #ffffff;
-      color: #222222;
+      color: var(--text);
       line-height: 1.75;
       font-size: 16px;
     }
 
-    header {
-      border-bottom: 1px solid #e0e0e0;
-      padding: 48px 40px 36px;
-      max-width: 760px;
+    .wrap {
+      max-width: 860px;
       margin: 0 auto;
+      padding: 0 40px;
     }
 
-    header .label {
+    /* ---------- Hero ---------- */
+    .hero {
+      border-bottom: 1px solid var(--line);
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+
+    .hero img.logo {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 20px;
+    }
+
+    .hero .label {
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #888888;
+      color: var(--muted);
       margin-bottom: 10px;
     }
 
-    header h1 {
-      font-size: 1.9rem;
-      font-weight: 600;
-      color: #111111;
-      line-height: 1.2;
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
     }
 
-    header .subtitle {
-      margin-top: 10px;
-      color: #888888;
+    .hero h1 .accent { color: var(--green-dark); }
+
+    .hero .tagline {
+      margin: 16px auto 0;
+      max-width: 620px;
+      font-size: 17px;
+      color: var(--text);
+    }
+
+    .hero .subtitle {
+      margin-top: 12px;
+      color: var(--muted);
       font-size: 14px;
     }
 
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 56px 40px 100px;
+    .hero .cta-row {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    section {
-      margin-bottom: 48px;
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
     }
+
+    .btn-primary {
+      background-color: var(--green);
+      color: #04331f;
+    }
+
+    .btn-primary:hover { background-color: #0fd68e; }
+
+    .btn-secondary {
+      border-color: var(--line);
+      color: var(--ink);
+      background: #ffffff;
+    }
+
+    .btn-secondary:hover { background-color: var(--bg-soft); }
+
+    /* ---------- Sections ---------- */
+    main section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    main section:last-of-type { border-bottom: none; }
 
     section h2 {
-      font-size: 1rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      color: #111111;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    section p {
-      color: #333333;
-      margin-bottom: 10px;
-      font-size: 15px;
-    }
-
-    section p:last-child { margin-bottom: 0; }
-
-    ul {
-      margin: 8px 0 10px 18px;
-    }
-
-    ul li {
+      color: var(--ink);
       margin-bottom: 6px;
-      font-size: 15px;
-      color: #333333;
     }
+
+    section .section-sub {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-bottom: 24px;
+    }
+
+    section p { margin-bottom: 10px; font-size: 15px; }
+
+    /* ---------- Feature grid ---------- */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .feature {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 18px 20px;
+      background: #ffffff;
+    }
+
+    .feature h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .feature p { font-size: 14px; color: var(--text); margin: 0; }
+
+    /* ---------- Integrations ---------- */
+    .integration {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+
+    .integration h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .integration p { font-size: 14.5px; margin-bottom: 6px; }
+    .integration p:last-child { margin-bottom: 0; }
 
     .note {
-      border: 1px solid #e0e0e0;
+      border: 1px solid var(--line);
       border-radius: 4px;
       padding: 14px 16px;
-      margin: 12px 0;
+      margin-top: 12px;
       font-size: 14.5px;
       color: #444444;
-      background-color: #fafafa;
+      background-color: var(--bg-soft);
     }
 
+    /* ---------- Privacy links ---------- */
+    .privacy-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .privacy-links a {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .privacy-links a:hover {
+      border-color: var(--green-dark);
+      background-color: var(--bg-soft);
+    }
+
+    .privacy-links a span.num {
+      color: var(--green-dark);
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    a.text-link {
+      color: var(--green-dark);
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    /* ---------- Figma ---------- */
+    .figma-card {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .figma-card .figma-text h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .figma-card .figma-text p { font-size: 14px; margin: 0; }
+
+    /* ---------- Contact / footer ---------- */
     .contact-block {
-      border: 1px solid #e0e0e0;
+      border: 1px solid var(--line);
       border-radius: 4px;
       padding: 16px 20px;
       margin-top: 10px;
       font-size: 15px;
-      color: #333333;
     }
 
     .contact-block .contact-role {
       font-weight: 600;
-      color: #111111;
+      color: var(--ink);
       margin-bottom: 4px;
     }
 
-    .contact-block a {
-      color: #222222;
-      text-decoration: underline;
-    }
-
-    .rights-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .right-item {
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      padding: 10px 14px;
-      font-size: 14px;
-      color: #333333;
-    }
-
-    .security-list {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0;
-    }
-
-    .security-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid #e0e0e0;
-      font-size: 15px;
-      color: #333333;
-    }
-
-    .security-list li:last-child { border-bottom: none; }
+    .contact-block a { color: #222222; text-decoration: underline; }
 
     footer {
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid var(--line);
       text-align: center;
       padding: 28px 24px;
-      color: #888888;
+      color: var(--muted);
       font-size: 13px;
-      max-width: 760px;
-      margin: 0 auto;
     }
 
-    @media (max-width: 600px) {
-      header { padding: 32px 20px 24px; }
-      main { padding: 40px 20px 80px; }
-      .rights-grid { grid-template-columns: 1fr; }
+    footer a { color: var(--muted); text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 0 20px; }
+      .hero { padding: 48px 0 40px; }
+      .hero h1 { font-size: 2rem; }
+      .feature-grid, .privacy-links { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <p class="label">Legal Document</p>
-  <h1>Privacy Policy</h1>
-  <p class="subtitle">ONAtrail · MAGIC-Trail Research Project · Last updated 2025</p>
-</header>
+<div class="wrap">
 
-<main>
-
-  <section>
-    <h2>1. Who We Are</h2>
-    <p>ONAtrail is a web platform developed as part of the <strong>MAGIC-Trail research project</strong>, led by Dr. Nicolas Bouscaren at the Reunion University Hospital (CHU de La Réunion) and funded through the European Regional Development Fund (ERDF/FEDER).</p>
-    <p>The platform provides trail runners with tools for race preparation, performance analysis, pace optimization, training monitoring, and the opportunity to participate in research projects related to trail running and endurance sports.</p>
-  </section>
-
-  <section>
-    <h2>2. Data Controller</h2>
-    <div class="contact-block">
-      <p class="contact-role">Data Controller</p>
-      <p>Reunion University Hospital (CHU de La Réunion)<br/>
-      CHU REUNION, EPS, FINESS 970 408 589<br/>
-      Allée des Topazes – CS 11021 – 97400 Saint-Denis, Réunion Island, France</p>
+  <header class="hero">
+    <img class="logo" src="logo.png" alt="ONAtrail logo"/>
+    <p class="label">MAGIC-Trail Research Project · CHU de La Réunion</p>
+    <h1>ONA<span class="accent">trail</span></h1>
+    <p class="tagline">A trail running platform for race preparation, pacing strategy, performance analysis and training monitoring — built by researchers, for trail runners.</p>
+    <p class="subtitle">Funded by the European Regional Development Fund (ERDF/FEDER)</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="privacy.html">Privacy Policy</a>
+      <a class="btn btn-secondary" href="#integrations">Strava &amp; Garmin Integration</a>
     </div>
-    <div class="contact-block">
-      <p class="contact-role">MAGIC-Trail / ONAtrail Project Contact</p>
-      <p>Dr. Nicolas Bouscaren<br/>
-      <a href="mailto:nicolas.bouscaren@chu-reunion.fr">nicolas.bouscaren@chu-reunion.fr</a></p>
-    </div>
-  </section>
+  </header>
 
-  <section>
-    <h2>3. Data We Collect</h2>
-    <p>Depending on the services you use, we may collect:</p>
-    <ul>
-      <li><strong>Account information:</strong> first name, last name, email address, age, and sex.</li>
-      <li><strong>Connection identifiers</strong> for Garmin and Strava synchronization (we never collect your Garmin or Strava usernames or passwords).</li>
-      <li><strong>Sports activity data:</strong> distance, duration, elevation gain, GPS tracks, pace, heart rate, training load, and other available performance indicators.</li>
-      <li><strong>Health-related data:</strong> heart rate, heart rate variability, recovery and sleep metrics when available through connected services, and injury history provided through questionnaires.</li>
-      <li><strong>Research questionnaire responses:</strong> epidemiological questionnaires, satisfaction surveys, etc.</li>
-      <li><strong>Technical connection data:</strong> IP address, connection logs, and session identifiers.</li>
-    </ul>
-    <div class="note">
-      <strong>Age requirement:</strong> The minimum age for registration is 18 years old. Access for minors may be granted upon request and is subject to specific consent requirements, including parental consent where applicable, in accordance with Article 8 of the GDPR and the digital age of consent established under French law.
-    </div>
-  </section>
+  <main>
 
-  <section>
-    <h2>4. Purposes and Legal Bases for Processing</h2>
-    <p>In accordance with Article 13(1)(c) of the GDPR, each processing activity relies on a distinct legal basis:</p>
-    <ul>
-      <li><strong>Account creation and management, platform operation, display and analysis of your activities</strong> → performance of a contract (Article 6(1)(b) GDPR).</li>
-      <li><strong>Personalized training, pacing, and performance recommendations</strong> → performance of a contract (Article 6(1)(b) GDPR), and, for AI-based functionalities that rely on health data, explicit consent (Article 9(2)(a) GDPR).</li>
-      <li><strong>Participation in scientific research involving health data</strong> → explicit and specific consent for research purposes (Article 9(2)(a) GDPR), separate from any cookie-related consent and separate from contractual consent.</li>
-      <li><strong>Security, fraud prevention, and technical maintenance</strong> → legitimate interest (Article 6(1)(f) GDPR).</li>
-      <li><strong>Compliance with legal and regulatory obligations</strong> → legal obligation (Article 6(1)(c) GDPR).</li>
-    </ul>
-    <div class="note">
-      The MAGIC-Trail / ONAtrail project has received a favorable opinion from the appropriate Ethics Committee (Comité de Protection des Personnes – CPP) and has been declared in accordance with the requirements of the French Data Protection Authority (CNIL).
-    </div>
-  </section>
+    <section id="about">
+      <h2>What is ONAtrail?</h2>
+      <p class="section-sub">A research-driven platform for trail runners</p>
+      <p>ONAtrail is a web platform developed as part of the <strong>MAGIC-Trail research project</strong>, led by Dr. Nicolas Bouscaren at the Reunion University Hospital (CHU de La Réunion). It combines practical tools for trail runners with the opportunity to contribute to scientific research on trail running and endurance sports.</p>
+      <div class="feature-grid" style="margin-top:18px;">
+        <div class="feature">
+          <h3>Race preparation</h3>
+          <p>Plan your races with course-aware tools designed for trail and ultra-trail events.</p>
+        </div>
+        <div class="feature">
+          <h3>Pacing optimization</h3>
+          <p>Personalized pacing strategies based on your training history and race profiles.</p>
+        </div>
+        <div class="feature">
+          <h3>Performance analysis</h3>
+          <p>Detailed analysis of your activities: pace, elevation, heart rate and training load.</p>
+        </div>
+        <div class="feature">
+          <h3>Scientific research</h3>
+          <p>Optionally contribute your data to research on trail running health and performance.</p>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>5. Use of Artificial Intelligence</h2>
-    <p>ONAtrail may use activity data and certain health-related data to develop, train, improve, or operate analytical, predictive, and recommendation models — for example: pacing recommendations, injury risk estimation, and training load analysis.</p>
-    <p>Whenever such processing involves health data, <strong>your prior and explicit consent is systematically required</strong>. This requirement is not conditional but arises directly from Article 9(2) of the GDPR whenever special categories of personal data are processed.</p>
-    <p>You may withdraw your consent at any time through your account settings or by contacting us, without affecting access to the platform's essential functionalities. Withdrawal of consent does not affect the lawfulness of processing carried out before such withdrawal.</p>
-  </section>
+    <section id="integrations">
+      <h2>Strava &amp; Garmin Integration</h2>
+      <p class="section-sub">How ONAtrail connects to your training services</p>
 
-  <section>
-    <h2>6. Recipients of Personal Data</h2>
-    <p>Depending on the purposes described above, your data may be shared with:</p>
-    <ul>
-      <li><strong>Researchers and scientific staff</strong> involved in the MAGIC-Trail project, strictly within the scope of authorized research activities.</li>
-      <li><strong>Institutional partners and project funders</strong> (including within the framework of the ERDF/FEDER program), in aggregated and anonymized form unless otherwise provided for in the research protocol.</li>
-      <li><strong>Technical service providers</strong> (hosting, maintenance, and infrastructure services), acting as data processors within the meaning of Article 28 GDPR and bound by appropriate data processing agreements.</li>
-      <li><strong>Garmin and Strava</strong>, solely to the extent necessary to synchronize the data that you explicitly authorize us to access. These companies operate under their own terms and privacy policies.</li>
-    </ul>
-    <div class="note"><strong>We do not sell your personal data.</strong> Aggregated and anonymized data may be used for research, statistical analysis, and platform improvement purposes.</div>
-  </section>
+      <div class="integration">
+        <h3>Strava</h3>
+        <p>With your explicit authorization, ONAtrail synchronizes your Strava activities (distance, duration, elevation gain, GPS tracks, pace, heart rate) to power race preparation, pacing and performance analysis features.</p>
+        <p>Authorization uses Strava's official OAuth flow — we never see your Strava password — and you can revoke ONAtrail's access at any time from your Strava settings ("My Apps") or from your ONAtrail account.</p>
+      </div>
 
-  <section>
-    <h2>7. Data Hosting</h2>
-    <p>Personal health data are hosted by <strong>Orange Business</strong>, a provider certified as a Health Data Hosting Provider (Hébergeur de Données de Santé – HDS) in accordance with Article L.1111-8 of the French Public Health Code.</p>
-  </section>
+      <div class="integration">
+        <h3>Garmin</h3>
+        <p>With your explicit authorization, ONAtrail synchronizes activity and wellness data from Garmin Connect (activities, heart rate, and when available heart-rate variability, recovery and sleep metrics) through the official Garmin Connect Developer Program APIs.</p>
+        <p>Authorization uses Garmin's official OAuth flow — we never see your Garmin password — and you can revoke ONAtrail's access at any time from your Garmin Connect account settings or from your ONAtrail account.</p>
+      </div>
 
-  <section>
-    <h2>8. Data Retention</h2>
-    <p>Your account data are retained for as long as your account remains active and are deleted or anonymized within one week following account closure.</p>
-    <p>Data collected as part of scientific research activities are retained for the duration of the MAGIC-Trail project and subsequently archived in accordance with applicable retention requirements governing health research.</p>
-    <p>You may request the deletion of your account and associated personal data at any time, subject to any legal retention obligations or requirements necessary to preserve the integrity of an ongoing research protocol.</p>
-  </section>
+      <div class="note">
+        <strong>Your data stays under your control.</strong> Synchronized data is used only for the purposes described in our <a class="text-link" href="privacy.html">Privacy Policy</a>. Health-related data is processed only with your explicit consent, is hosted by an HDS-certified health data host, and is never sold. You can disconnect a service or request deletion of your data at any time.
+      </div>
+    </section>
 
-  <section>
-    <h2>9. Your Rights</h2>
-    <p>Under the GDPR, you have the following rights:</p>
-    <div class="rights-grid">
-      <div class="right-item">Right of access to your personal data</div>
-      <div class="right-item">Right to rectify inaccurate data</div>
-      <div class="right-item">Right to erasure ("right to be forgotten")</div>
-      <div class="right-item">Right to restriction of processing</div>
-      <div class="right-item">Right to object to certain processing activities</div>
-      <div class="right-item">Right to data portability</div>
-      <div class="right-item">Right to withdraw your consent at any time</div>
-    </div>
-    <p style="margin-top:14px;">Requests may be submitted using the contact details provided in Section 2. We undertake to respond within one month, which may be extended to three months for complex requests, in accordance with Article 12 GDPR.</p>
-    <div class="note" style="margin-top:12px;">
-      You also have the right to lodge a complaint with the <strong>French Data Protection Authority (CNIL)</strong>:<br/>
-      Commission Nationale de l'Informatique et des Libertés<br/>
-      3 Place de Fontenoy – TSA 80715 – 75334 Paris Cedex 07 – France<br/>
-      <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
-    </div>
-  </section>
+    <section id="design">
+      <h2>Product Design Preview</h2>
+      <p class="section-sub">Explore the ONAtrail interface mockups</p>
+      <div class="figma-card">
+        <div class="figma-text">
+          <h3>ONAtrail on Figma</h3>
+          <p>The platform is currently in development. You can preview the interface design and user flows in our Figma prototype.</p>
+        </div>
+        <!-- TODO: replace the href below with the real Figma share link -->
+        <a class="btn btn-primary" href="https://www.figma.com/" target="_blank" rel="noopener">Open the Figma prototype</a>
+      </div>
+    </section>
 
-  <section>
-    <h2>10. Data Security</h2>
-    <p>Technical and organizational measures are implemented to protect your data against unauthorized access, disclosure, alteration, or destruction:</p>
-    <ul class="security-list">
-      <li>Encryption of data both in transit and at rest</li>
-      <li>Strict access control mechanisms</li>
-      <li>Audit logging and traceability of access to health data</li>
-      <li>Secure user authentication procedures</li>
-      <li>Regular backup procedures</li>
-    </ul>
-  </section>
+    <section id="privacy">
+      <h2>Privacy &amp; Data Protection</h2>
+      <p class="section-sub">GDPR-compliant processing, health data hosted in France (HDS)</p>
+      <p>Our full <a class="text-link" href="privacy.html">Privacy Policy</a> describes what data we collect, why, who can access it, and your rights. Direct links to each section:</p>
+      <div class="privacy-links">
+        <a href="privacy.html#who-we-are"><span class="num">1.</span>Who We Are</a>
+        <a href="privacy.html#data-controller"><span class="num">2.</span>Data Controller</a>
+        <a href="privacy.html#data-we-collect"><span class="num">3.</span>Data We Collect</a>
+        <a href="privacy.html#purposes-legal-bases"><span class="num">4.</span>Purposes &amp; Legal Bases</a>
+        <a href="privacy.html#artificial-intelligence"><span class="num">5.</span>Use of Artificial Intelligence</a>
+        <a href="privacy.html#recipients"><span class="num">6.</span>Recipients of Personal Data</a>
+        <a href="privacy.html#data-hosting"><span class="num">7.</span>Data Hosting</a>
+        <a href="privacy.html#data-retention"><span class="num">8.</span>Data Retention</a>
+        <a href="privacy.html#your-rights"><span class="num">9.</span>Your Rights</a>
+        <a href="privacy.html#data-security"><span class="num">10.</span>Data Security</a>
+      </div>
+    </section>
 
-  <section>
-    <h2>11. Changes to This Privacy Policy</h2>
-    <p>This Privacy Policy may be updated from time to time.</p>
-    <p>Any material changes affecting the purposes of processing or requiring renewed consent — particularly regarding the use of health data or artificial intelligence technologies — will be communicated to you by email, in addition to publication of the updated version on this page.</p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="section-sub">Questions about the platform or your data</p>
+      <div class="contact-block">
+        <p class="contact-role">MAGIC-Trail / ONAtrail Project Contact</p>
+        <p>Dr. Nicolas Bouscaren<br/>
+        <a href="mailto:nicolas.bouscaren@chu-reunion.fr">nicolas.bouscaren@chu-reunion.fr</a></p>
+      </div>
+      <div class="contact-block">
+        <p class="contact-role">Data Controller</p>
+        <p>Reunion University Hospital (CHU de La Réunion)<br/>
+        Allée des Topazes – CS 11021 – 97400 Saint-Denis, Réunion Island, France</p>
+      </div>
+    </section>
 
-</main>
+  </main>
+
+</div>
 
 <footer>
   <p>ONAtrail · MAGIC-Trail Research Project · CHU de La Réunion</p>
-  <p style="margin-top:4px;">Funded by the European Regional Development Fund (ERDF/FEDER)</p>
+  <p style="margin-top:4px;">Funded by the European Regional Development Fund (ERDF/FEDER) · <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
 </body>
