@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ONAtrail – Support &amp; Strava Integration Help</title>
-  <meta name="description" content="Support page for ONAtrail athletes: how to connect your Strava account, frequently asked questions, contact and privacy information."/>
+  <title>ONAtrail – Trail running analytics and race preparation platform</title>
+  <meta name="description" content="ONAtrail is a specialized trail running performance web platform: race preparation, pacing, performance analytics and athlete profiling, with Strava and Garmin Connect synchronization."/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -43,13 +43,13 @@
     }
 
     .hero img.logo {
-      width: 80px;
-      height: 80px;
+      width: 88px;
+      height: 88px;
       margin-bottom: 16px;
     }
 
     .hero h1 {
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: var(--ink);
       line-height: 1.15;
@@ -67,7 +67,7 @@
 
     .hero .intro {
       margin: 16px auto 0;
-      max-width: 640px;
+      max-width: 660px;
       font-size: 15px;
       color: var(--text);
     }
@@ -136,19 +136,32 @@
 
     .feature p { font-size: 13.5px; color: var(--text); margin: 0; }
 
-    /* ---------- Steps ---------- */
+    /* ---------- Connect blocks ---------- */
+    .connect-block {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+
+    .connect-block h3 {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
     ol.steps {
       list-style: none;
       counter-reset: step;
-      margin-top: 4px;
     }
 
     ol.steps li {
       counter-increment: step;
       position: relative;
-      padding: 12px 0 12px 48px;
+      padding: 9px 0 9px 44px;
       border-bottom: 1px solid var(--line);
-      font-size: 15px;
+      font-size: 14.5px;
     }
 
     ol.steps li:last-child { border-bottom: none; }
@@ -159,13 +172,13 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       background: var(--green);
       color: #04331f;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13.5px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -191,8 +204,8 @@
     .faq-item ul { margin: 4px 0 6px 18px; font-size: 14.5px; }
     .faq-item ul li { margin-bottom: 4px; }
 
-    /* ---------- Contact ---------- */
-    .contact-card {
+    /* ---------- Cards ---------- */
+    .card {
       border: 1px solid var(--line);
       border-radius: 6px;
       padding: 22px 24px;
@@ -200,7 +213,7 @@
       background: var(--bg-soft);
     }
 
-    .contact-card p { font-size: 15px; margin-bottom: 12px; }
+    .card p { font-size: 14.5px; margin-bottom: 12px; }
 
     .btn {
       display: inline-block;
@@ -226,6 +239,30 @@
       color: var(--muted);
     }
 
+    /* ---------- Privacy links ---------- */
+    .privacy-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .privacy-links a {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .privacy-links a:hover {
+      border-color: var(--green-dark);
+      background-color: var(--bg-soft);
+    }
+
     /* ---------- Footer ---------- */
     footer {
       border-top: 1px solid var(--line);
@@ -237,11 +274,18 @@
 
     footer a { color: var(--muted); text-decoration: underline; }
 
+    footer .trademark {
+      max-width: 720px;
+      margin: 10px auto 0;
+      font-size: 12px;
+      color: #aaaaaa;
+    }
+
     @media (max-width: 640px) {
       .wrap { padding: 0 20px; }
       .hero { padding: 44px 0 36px; }
       .hero h1 { font-size: 1.9rem; }
-      .feature-grid { grid-template-columns: 1fr; }
+      .feature-grid, .privacy-links { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -252,12 +296,12 @@
   <header class="hero">
     <img class="logo" src="logo.png" alt="ONAtrail logo"/>
     <h1>ONA<span class="accent">trail</span></h1>
-    <p class="tagline">Support &amp; Strava Integration Help</p>
-    <p class="intro">ONAtrail is a trail running analytics and race preparation web platform. This page is the support site for ONAtrail athletes: how to connect your Strava or Garmin account, answers to common questions, and how to reach us.</p>
+    <p class="tagline">Advanced trail running analytics and race preparation platform</p>
+    <p class="intro">ONAtrail is a specialized trail running performance web platform designed to support athletes before, during, and after their races. Athletes connect their Strava or Garmin account to access personalized, trail-specific insights.</p>
     <nav>
-      <a href="#about">About</a>
+      <a href="#features">Features</a>
       <a href="#preview">Preview</a>
-      <a href="#connect-strava">Connect Strava</a>
+      <a href="#connect">Connect your account</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
@@ -266,17 +310,17 @@
 
   <main>
 
-    <section id="about">
-      <h2>About ONAtrail</h2>
-      <p>ONAtrail is a specialized trail running performance web platform designed to support athletes before, during, and after their races. By connecting their Strava or Garmin account, athletes access trail-specific tools:</p>
+    <section id="features">
+      <h2>Main Features</h2>
+      <p>Trail running presents unique challenges compared to road running — elevation changes, technical terrain, and race-specific pacing demands. ONAtrail provides dedicated tools to address them:</p>
       <div class="feature-grid" style="margin-top:14px;">
         <div class="feature">
           <h3>Trail race preparation</h3>
-          <p>Pacing assistance based on course characteristics and historical race performance data.</p>
+          <p>Pacing assistance based on course characteristics and historical race performance data, helping athletes build a race strategy adapted to their goals.</p>
         </div>
         <div class="feature">
           <h3>Performance analytics</h3>
-          <p>Elevation-based performance metrics and detailed post-race analysis.</p>
+          <p>Elevation-based performance metrics and detailed post-race analysis to better understand each performance.</p>
         </div>
         <div class="feature">
           <h3>Athlete profile</h3>
@@ -284,44 +328,57 @@
         </div>
         <div class="feature">
           <h3>Strava &amp; Garmin integration</h3>
-          <p>All synchronized data is used solely to provide insights to the authenticated athlete within their own account.</p>
+          <p>Securely connect your Strava or Garmin Connect account. All synchronized data is used solely to provide insights to the authenticated athlete within their own account.</p>
         </div>
       </div>
-      <p style="margin-top:16px; margin-bottom:0;">The platform is currently in its final development phase, with a public launch planned for August 14, 2026.</p>
+      <p style="margin-top:16px; margin-bottom:0;">ONAtrail is currently in its final development phase and is scheduled for public launch on August 14, 2026.</p>
     </section>
 
     <section id="preview">
       <h2>Application Preview</h2>
-      <div class="contact-card">
+      <div class="card">
         <p>Explore the ONAtrail interface in our interactive prototype: dashboard, activity analysis, athlete profile and pacing tools.</p>
         <a class="btn" href="https://www.figma.com/proto/dor8wuEFfW1tCCf6CDefar/MagicTrail--UI-?node-id=1087-5191&p=f&t=1Uyx5oHusw4AzUDn-1&scaling=scale-down&content-scaling=fixed&page-id=1087%3A2986&starting-point-node-id=1087%3A5191&show-proto-sidebar=1" target="_blank" rel="noopener">View the interactive prototype on Figma</a>
-        <p class="disclaimer" style="margin-top:12px; margin-bottom:0;">Please note: this prototype is a temporary preview and still a work in progress — it does not reflect the final design of the application.</p>
+        <p class="disclaimer" style="margin-top:12px; margin-bottom:0;">Please note: this prototype is still a work in progress and does not reflect the final design of the application.</p>
       </div>
     </section>
 
-    <section id="connect-strava">
-      <h2>Connecting your Strava account</h2>
-      <ol class="steps">
-        <li>Log in to your ONAtrail account.</li>
-        <li>Click <strong>Connect with Strava</strong> in your account settings.</li>
-        <li>You will be redirected to Strava's official authorization page. Review the requested permissions and click <strong>Authorize</strong>.</li>
-        <li>You're done — your activities will be synchronized automatically and your trail analytics will start appearing in your dashboard.</li>
-      </ol>
-      <p class="disclaimer" style="margin-top:12px; margin-bottom:0;">ONAtrail never sees or stores your Strava password. Authorization is handled entirely by Strava through its official OAuth flow.</p>
-      <p style="margin-top:16px; margin-bottom:0; font-size:14.5px;"><strong>Using a Garmin device?</strong> ONAtrail also supports Garmin Connect synchronization. The process is the same: click <strong>Connect with Garmin</strong> in your account settings and authorize access through Garmin's official authorization page.</p>
+    <section id="connect">
+      <h2>Connect your account</h2>
+      <p>ONAtrail synchronizes your activities through the official Strava and Garmin Connect APIs. Authorization always happens on the provider's own page — ONAtrail never sees or stores your Strava or Garmin password.</p>
+
+      <div class="connect-block" id="connect-strava">
+        <h3>Connecting your Strava account</h3>
+        <ol class="steps">
+          <li>Log in to your ONAtrail account.</li>
+          <li>Click <strong>Connect with Strava</strong> in your account settings.</li>
+          <li>You will be redirected to Strava's official authorization page. Review the requested permissions and click <strong>Authorize</strong>.</li>
+          <li>Your activities will be synchronized automatically and your trail analytics will appear in your dashboard.</li>
+        </ol>
+      </div>
+
+      <div class="connect-block" id="connect-garmin">
+        <h3>Connecting your Garmin account</h3>
+        <ol class="steps">
+          <li>Log in to your ONAtrail account.</li>
+          <li>Click <strong>Connect with Garmin</strong> in your account settings.</li>
+          <li>You will be redirected to Garmin's official authorization page. Review the requested permissions and confirm.</li>
+          <li>Your activities will be synchronized automatically and your trail analytics will appear in your dashboard.</li>
+        </ol>
+      </div>
     </section>
 
     <section id="faq">
       <h2>Frequently Asked Questions</h2>
 
       <div class="faq-item">
-        <h3>Why do I need to connect my Strava account?</h3>
-        <p>Connecting your Strava account lets ONAtrail analyze your training history to provide personalized trail analytics: pacing recommendations, climbing and descending profiles, and race preparation tools tailored to you.</p>
+        <h3>Why do I need to connect my Strava or Garmin account?</h3>
+        <p>Connecting your account lets ONAtrail analyze your training history to provide personalized trail analytics: pacing recommendations, climbing and descending profiles, and race preparation tools tailored to you.</p>
       </div>
 
       <div class="faq-item">
-        <h3>What data is imported from Strava?</h3>
-        <p>Only the activity data needed to provide your insights: activities with distance, duration, elevation gain, GPS tracks, pace and heart rate when available. Your data is only ever visible to you, within your own account. We never sell your data and we never share it with third parties for advertising.</p>
+        <h3>What data is imported?</h3>
+        <p>Only the activity data needed to provide your insights: activities with distance, duration, elevation gain, GPS tracks, pace and heart rate when available. Your data is only ever visible to you, within your own account. We never sell your data and we never share it with third parties for advertising. See the dedicated <a class="text-link" href="privacy.html#garmin-data">Garmin Data</a> and <a class="text-link" href="privacy.html#strava-data">Strava Data</a> sections of our Privacy Policy for full details.</p>
       </div>
 
       <div class="faq-item">
@@ -331,12 +388,17 @@
           <li>From ONAtrail: open your account settings and click <strong>Disconnect Strava</strong>.</li>
           <li>From Strava: go to <strong>Settings → My Apps</strong> on strava.com and click <strong>Revoke Access</strong> next to ONAtrail.</li>
         </ul>
-        <p>Once access is revoked, synchronization stops immediately.</p>
+        <p>Once access is revoked, synchronization stops immediately and all previously collected Strava data is deleted within 30 days.</p>
       </div>
 
       <div class="faq-item">
-        <h3>Can I use ONAtrail with Garmin instead of Strava?</h3>
-        <p>Yes. ONAtrail also integrates with Garmin Connect through Garmin's official APIs. You can connect either service (or both) from your account settings, and disconnect at any time — from ONAtrail, or from your Garmin Connect account settings. Garmin data is handled under the same rules described in our <a class="text-link" href="privacy.html">Privacy Policy</a>.</p>
+        <h3>How can I disconnect my Garmin account?</h3>
+        <p>You can revoke ONAtrail's access at any time, in either of two ways:</p>
+        <ul>
+          <li>From ONAtrail: open your account settings and click <strong>Disconnect Garmin</strong>.</li>
+          <li>From Garmin: manage third-party app access in your Garmin Connect account settings.</li>
+        </ul>
+        <p>Once access is revoked, synchronization stops immediately and all previously collected Garmin data is deleted.</p>
       </div>
 
       <div class="faq-item">
@@ -346,13 +408,13 @@
 
       <div class="faq-item">
         <h3>My activities are not syncing. What should I do?</h3>
-        <p>First, check that ONAtrail still appears in <strong>Settings → My Apps</strong> on strava.com. If it does and syncing still fails, contact us at <a class="text-link" href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a> and we will help you resolve the issue.</p>
+        <p>First, check that ONAtrail is still authorized in your Strava settings (<strong>Settings → My Apps</strong>) or your Garmin Connect account settings. If it is and syncing still fails, contact us at <a class="text-link" href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a> and we will help you resolve the issue.</p>
       </div>
     </section>
 
     <section id="contact">
       <h2>Need help?</h2>
-      <div class="contact-card">
+      <div class="card">
         <p>For any question about ONAtrail or your Strava or Garmin connection, our team is happy to help.</p>
         <a class="btn" href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a>
       </div>
@@ -360,13 +422,11 @@
 
     <section id="privacy">
       <h2>Privacy Policy</h2>
-      <p style="margin-bottom:0;">Learn how we collect, use and protect your data: <a class="text-link" href="privacy.html">read our Privacy Policy</a>.</p>
-    </section>
-
-    <section id="status">
-      <h2>Development Status</h2>
-      <p>ONAtrail is currently in its final development phase and is scheduled for public launch on August 14, 2026.</p>
-      <p class="disclaimer" style="margin-bottom:0;">This page is a temporary support and information page published for the duration of the development phase. The final ONAtrail website will be hosted on its own domain, not at this URL.</p>
+      <p>Learn how we collect, use and protect your data: <a class="text-link" href="privacy.html">read our Privacy Policy</a>.</p>
+      <div class="privacy-links">
+        <a href="privacy.html#garmin-data">How we handle Garmin data</a>
+        <a href="privacy.html#strava-data">How we handle Strava data</a>
+      </div>
     </section>
 
   </main>
@@ -375,6 +435,7 @@
 
 <footer>
   <p>© 2026 ONAtrail · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:ona.trail@outlook.com">ona.trail@outlook.com</a></p>
+  <p class="trademark">ONAtrail uses or refers to the Strava® and Garmin® services. Strava is a registered trademark of Strava, Inc. Garmin is a registered trademark of Garmin Ltd. or its subsidiaries. ONAtrail is not affiliated with, endorsed by, or sponsored by Strava, Inc. or Garmin Ltd.</p>
 </footer>
 
 </body>
